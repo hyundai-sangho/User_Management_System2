@@ -1,0 +1,29 @@
+<div class="col-6">
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="floatingInput" value="{{this.name}}" placeholder="이름" name="name" />
+    <label for="floatingInput">이름</label>
+  </div>
+</div>
+<div class="col-6">
+  <div class="form-floating mb-3">
+    <input type="email" class="form-control" id="floatingInput" value="{{this.email}}" placeholder="이메일" name="email" />
+    <label for="floatingInput">이메일</label>
+  </div>
+</div>
+<div class="col-12">
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="floatingInput" value="{{this.phone}}" placeholder="핸드폰" name="phone" />
+    <label for="floatingInput">핸드폰</label>
+  </div>
+</div>
+<div class="col-12">
+  <div class="form-floating mb-3">
+    <textarea class="form-control" name="comments" id="comments" style="height: 200px;"
+      placeholder="코멘트 작성">{{this.comments}}</textarea>
+    <label for="floatingInput">코멘트</label>
+  </div>
+</div>
+
+<div class="col-12 d-grid">
+  <button type="submit" class="btn btn-primary">등록</button>
+</div>

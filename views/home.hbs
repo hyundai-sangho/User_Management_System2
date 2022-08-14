@@ -1,0 +1,45 @@
+{{#if removedUser}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  사용자 삭제 완료
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+<div class="row">
+  <div class="col-6 mb-2">
+    <h1>사용자</h1>
+  </div>
+  <div class="col-6 d-flex justify-content-end">
+    <a href="/addUser" type="button" class="btn btn-primary align-self-center">+ 사용자 추가</a>
+  </div>
+</div>
+
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">이름</th>
+      <th scope="col">이메일</th>
+      <th scope="col">핸드폰</th>
+      <th scope="col" class="text-end">동작</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {{#each 받은데이터}}
+    <tr>
+      <th scope="row" class="align-middle">{{this.id}}</th>
+      <td class="align-middle">{{this.name}}</td>
+      <td class="align-middle">{{this.email}}</td>
+      <td class="align-middle">{{this.phone}}</td>
+      <td class="text-end align-middle">
+        <a href="/viewUser/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-eye"></i> 보기</a>
+        <a href="/editUser/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i>
+          수정</a>
+        <a href="/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x"></i> 삭제</a>
+      </td>
+    </tr>
+    {{/each}}
+
+  </tbody>
+</table>
